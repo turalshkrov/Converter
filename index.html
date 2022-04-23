@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Converter</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Images/header-logo.svg" >
+                </div>
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li><a href="" class="menu-list-active">БАНК</a></li>
+                        <li><a href="">БИЗНЕС</a></li>
+                        <li><a href="">ИНВЕСТИЦИИ</a></li>
+                        <li><a href="">СТРАХОВАНИЕ</a></li>
+                        <li><a href="">МОБАЙЛ</a></li>
+                        <li><a href="">ПУТЕШЕСТВИЯ</a></li>
+                        <li><a href="">РАЗВЛЕЧЕНИЯ</a></li>
+                    </ul>
+                </div>
+                <div class="menu-button">
+                    <a href="">ВОЙТИ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="title">
+                <h1>
+                    Конвертер валют онлайн
+                </h1>
+            </div>
+            <div class="currency-main">
+                <div class="currency-card">
+                    <div class="cur-text">
+                        <p>У меня есть </p>
+                    </div>
+                    <div class="cur-btn-group">
+                        <button class="cur-btn cur-btn-active">rub</button>
+                        <button class="cur-btn">usd</button>
+                        <button class="cur-btn">eur</button>
+                        <button class="cur-btn">gbp</button>
+                    </div>
+                    <div class="input">
+                        <input type="number">
+                        <p class="cur-input-text">1 RUB = 0.0135 USD</p>
+                    </div>
+                </div>
+                <div class="currency-card">
+                    <div class="cur-text">
+                        <p>Хочу приобрести</p>
+                    </div>
+                    <div class="cur-btn-group">
+                        <button class="cur-btn">rub</button>
+                        <button class="cur-btn cur-btn-active">usd</button>
+                        <button class="cur-btn">eur</button>
+                        <button class="cur-btn">gbp</button>
+                    </div>
+                    <div class="input">
+                        <input type="number">
+                        <p class="cur-input-text">1 USD = 73.8896 RUB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
