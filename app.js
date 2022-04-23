@@ -19,7 +19,7 @@ rightBtn.addEventListener('click', async e => {
     btnColorChange(e);
     cur2 = e.target.innerText;
     await getRates(cur1, cur2);
-    leftInput.value = rightInput.value * rate;
+    rightInput.value = leftInput.value * rate;
 })
 leftInput.addEventListener('keyup', e => {
     convert(e);
