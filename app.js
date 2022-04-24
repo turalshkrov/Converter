@@ -2,6 +2,8 @@ let leftBtn = document.querySelector('#left-btn');
 let rightBtn = document.querySelector('#right-btn');
 let leftInput = document.querySelector('#l-input');
 let rightInput = document.querySelector('#r-input');
+let leftInputText = document.querySelector('#l-input-text');
+let rightInputText = document.querySelector('#r-input-text');
 let url = 'https://api.exchangerate.host/latest';
 let cur1 = 'RUB';
 let cur2 = 'USD';
@@ -14,12 +16,16 @@ leftBtn.addEventListener('click', async e => {
     cur1 = e.target.innerText;
     await getRates(cur1, cur2);
     rightInput.value = leftInput.value * rate;
+    leftInputText.innerText = `1 ${cur1} = ${rate} ${cur2}`;
+    rightInputText.innerText = `1 ${cur2} = ${Math.round(1 / rate * 10000) / 10000} ${cur1}`;
 })
 rightBtn.addEventListener('click', async e => {
     btnColorChange(e);
     cur2 = e.target.innerText;
     await getRates(cur1, cur2);
     rightInput.value = leftInput.value * rate;
+    leftInputText.innerText = `1 ${cur1} = ${rate} ${cur2}`;
+    rightInputText.innerText = `1 ${cur2} = ${Math.round(1 / rate * 10000) / 10000} ${cur1}`;
 })
 leftInput.addEventListener('keyup', e => {
     convert(e);
